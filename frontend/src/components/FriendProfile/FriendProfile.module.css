@@ -1,0 +1,166 @@
+.first {
+  height: 70vh;
+  background-color: white;
+}
+
+.middle {
+  width: 60%;
+  height: 100%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-rows: 70% 30%;
+}
+
+.cover {
+  display: block;
+  height: 100%;
+  width: 100%;
+  background-color: #f4f4f4;
+  border-radius: 0 0 1rem 1rem;
+}
+
+.cover img {
+  width: 100%;
+  height: 100%;
+}
+
+.container_info {
+  height: 100%;
+}
+
+.name_desc_container {
+  height: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.name_desc {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.name_desc h2 {
+  font-size: 2rem;
+}
+
+.name_desc button {
+  width: 70%;
+  border: none;
+  outline: none;
+  background-color: white;
+  text-decoration: underline;
+  color: rgb(17, 133, 241);
+  cursor: pointer;
+}
+.name {
+  margin-top: 0.2rem;
+}
+.options_information {
+  border-top: 1px solid rgb(207, 207, 207);
+  height: 30%;
+  display: flex;
+  padding: 0 2rem;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.3rem 0;
+}
+.photo {
+  background: white;
+  position: absolute;
+  width: 14rem;
+  height: 14rem;
+  border-radius: 100%;
+  color: rgb(214, 214, 214);
+  top: -13rem;
+}
+.posts_container {
+  width: 100%;
+  margin: 0 auto;
+  height: 700px;
+}
+.details_container {
+  display: grid;
+  grid-template-columns: 40% 60%;
+  width: 60%;
+  padding: 0 2rem;
+  margin: 1rem auto;
+  height: 700px;
+  gap: 0 1rem;
+}
+
+.details {
+  width: 100%;
+  background-color: white;
+  height: 28%;
+  border-radius: 1rem;
+  padding: 1rem;
+}
+.colum {
+  height: 1400px;
+}
+
+.photos_container {
+  height: 30%;
+  width: 100%;
+  background-color: white;
+  margin-top: 2rem;
+  border-radius: 1rem;
+}
+.options_first {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.options_first a {
+  text-decoration: none;
+  color: grey;
+  width: 25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem;
+  transition: background 200ms;
+}
+
+.options_first a:hover {
+  background-color: rgb(197, 197, 197);
+}
+
+.options_second {
+  width: 35%;
+  height: 100%;
+  display: grid;
+  gap: 0 0.5rem;
+  grid-template-columns: 3fr 1fr 1fr;
+}
+
+.options_second button {
+  background-color: red;
+  border: none;
+  outline: none;
+  background-color: white;
+  height: 100%;
+  width: 100%;
+  transition: background 200ms;
+  cursor: pointer;
+  border-radius: 1rem;
+  color: grey;
+}
+
+.options_second button:hover {
+  background-color: rgb(197, 197, 197);
+}
+.changeDescription {
+  border: none;
+  outline: none;
+  background-color: #dfdfdf;
+  border-radius: 1rem;
+  padding: 0.5rem;
+  margin-top: 0.5rem;
+}

@@ -1,0 +1,51 @@
+.container {
+  width: 80%;
+  height: 80vh;
+  margin: 4% auto;
+}
+.title {
+  text-align: center;
+  font-size: 3rem;
+  color: rgb(17, 133, 241);
+}
+.inputs_container {
+  width: 50%;
+  height: 80%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.input {
+  width: 60%;
+  margin-top: 3rem;
+  padding: 0.5rem 1rem;
+  outline: none;
+  border: 1px solid rgb(17, 133, 241);
+  font-size: 1rem;
+  background-color: white;
+  color: rgb(56, 56, 56);
+}
+.log_button {
+  cursor: pointer;
+  width: 60%;
+  text-align: center;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  margin-top: 1rem;
+  border: none;
+  outline: none;
+  background-color: rgb(17, 133, 241);
+  color: white;
+}
+.register_button {
+  cursor: pointer;
+  width: 60%;
+  text-align: center;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  outline: none;
+  border: 1px solid rgb(17, 133, 241);
+  color: rgb(37, 37, 37);
+}

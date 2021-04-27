@@ -1,0 +1,51 @@
+### -create a new post
+POST http://localhost:3001/api/post/
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MDgzOWYyZmQ0NDM3ZjI1ZDQzMDM1OWQiLCJuYW1lIjoiQW5nZWwiLCJsYXN0TmFtZSI6Ik1vcmVubyIsImVtYWlsIjoiYW5nZWxAZ21haWwuY29tIiwiaWF0IjoxNjE5Mjc0MDE5fQ.3wyqqxwsxl0_fe4sVhaWBVyJeWSjd8wpG10JF8ozAJo
+
+{
+    "text": "pero yo no puedo, pa ser sincero yo ni puedo ta ta ta ta ta ta"
+}
+
+
+
+
+### get all the post by a user
+GET http://localhost:3001/api/post/607ff48c00979f1e04a03c6f/posts
+
+
+
+
+### - get all post
+GET http://localhost:3001/api/post/
+
+
+
+
+### - get a single post
+GET http://localhost:3001/api/post/608429426db65507ac64ce5e
+
+
+
+
+
+### - give like to a post
+PUT http://localhost:3001/api/post/608732af816f6a16dc6228e0/like
+Content-Type: application/json
+
+{
+    "id": "6086561f9d0fa20cc007618f",
+    "type": "like"
+}
+
+### - create a commect in a post
+PUT http://localhost:3001/api/post/608429426db65507ac64ce5e/comment
+Content-Type: application/json
+
+{
+    "id": "60839f2fd4437f25d430359d",
+    "text": "creating a posts"
+}
+
+### - deleter a post
+DELETE  http://localhost:3001/api/post/60837f8a441ab92008058261

@@ -1,0 +1,16 @@
+.container {
+  min-height: 4%;
+  height: auto;
+  min-width: 7%;
+  width: auto;
+  display: flex;
+}
+.pro {
+  margin: 1rem 0;
+}
+
+.capa {
+  background-color: rgb(226, 225, 225);
+  padding: 0.5rem;
+  border-radius: 1rem;
+}

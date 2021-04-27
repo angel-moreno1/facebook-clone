@@ -1,0 +1,26 @@
+### create a chat or send and existent chat
+POST http://localhost:3001/api/chat/6086561f9d0fa20cc007618f HTTP/1.1
+Content-Type: application/json
+
+{
+    "id": "60869c5569e804140cb770b5"
+}
+
+
+### - get latest by user 
+GET http://localhost:3001/api/chat/6085082c0010da19c85db1d8/latest
+
+### - get single chat
+GET http://localhost:3001/api/chat/60850d240010da19c85db1de
+
+# 6086561f9d0fa20cc007618f - friend 
+# 60869c5569e804140cb770b5 - me
+### send a message to a chat -- chatId, from, message
+PUT http://localhost:3001/api/chat/send HTTP/1.1
+Content-Type: application/json
+
+{
+    "id": "60869c7169e804140cb770b7",
+    "from": "60869c5569e804140cb770b5",
+    "message": "hola !!"
+}

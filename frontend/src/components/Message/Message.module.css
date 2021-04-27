@@ -1,0 +1,13 @@
+.msg_container {
+  width: 100%;
+  display: flex;
+}
+
+.msg {
+  width: auto;
+  max-width: 50%;
+  background-color: rgb(228, 230, 235);
+  padding: 0.6rem;
+  margin: 0.1rem 0;
+  border-radius: 1rem 1rem 1rem 0;
+}

@@ -1,0 +1,29 @@
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.outer {
+  width: 70%;
+  height: 80%;
+  text-align: center;
+  padding-top: 4rem;
+}
+.confetti {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  left: 50%;
+}
+.title {
+  font-size: 4rem;
+  color: rgb(17, 133, 241);
+}
+.subtitle {
+  margin-top: 1rem;
+  font-size: 2.4rem;
+  color: rgb(66, 66, 66);
+}
