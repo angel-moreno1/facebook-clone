@@ -1,0 +1,35 @@
+.commentContainer {
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  /* background-color: grey; */
+  border-radius: 1rem;
+}
+.makeCommment {
+  width: 100%;
+  height: 20px;
+  display: flex;
+  align-items: center;
+}
+.makeCommment form {
+  width: 100%;
+}
+.makeCommment form input {
+  width: 100%;
+  border: none;
+  outline: none;
+  background-color: #f4f4f4;
+  padding: 0.6rem;
+  border-radius: 1rem;
+}
+.comments {
+  height: auto;
+
+  /* background: blue; */
+}
+.make_commment_photo {
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 100%;
+}

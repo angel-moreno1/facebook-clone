@@ -1,0 +1,148 @@
+.navContainer {
+  height: 8vh;
+  width: 100%;
+  /* position: relative; */
+  color: rgb(119, 119, 119);
+}
+
+.nav_bar {
+  height: 7vh;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+  background-color: white;
+  border-bottom: 1px solid #e6e8ea;
+  z-index: 1000;
+  position: fixed;
+  top: 0px;
+  box-shadow: 1px 1px 23px -5px rgba(206, 208, 210, 0.75);
+}
+
+.circle_button {
+  border-radius: 100%;
+  padding: 0.3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #e4e6eb;
+  transition: background 250ms;
+}
+.circle_button:hover {
+  background: #d0d1d3e7;
+}
+
+.profile_button {
+  /* background: #e7f3ff; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1rem;
+  padding: 0.3rem;
+  transition: background 200ms;
+}
+
+.profile_button:hover {
+  background: #e4e6eb;
+}
+
+.profile_button_link {
+  text-decoration: none;
+  color: black;
+  font-weight: 700;
+}
+
+.profile_button img {
+  border-radius: 100%;
+  margin-right: 0.4rem;
+}
+
+.profile_button span {
+  margin-right: 0.4rem;
+}
+.logo_input {
+  width: 20%;
+  display: flex;
+  align-items: center;
+  /* position: relative; */
+}
+
+.logo_input h5 {
+  margin-right: 1rem;
+}
+.search {
+  height: 50%;
+  width: 100%;
+  padding: 0.6rem 0.5rem;
+  border: none;
+  outline: none;
+  border-radius: 1rem;
+  background-color: rgba(180, 190, 209, 0.219);
+}
+.mainIcones {
+  width: 30%;
+  color: rgb(201, 199, 199);
+  text-decoration: none;
+  display: flex;
+  justify-content: space-around;
+}
+.rightIcones {
+  width: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.profile_img {
+  width: 2.4rem;
+  height: 2.4rem;
+  border-radius: 50%;
+  margin-right: 0.4rem;
+}
+
+.profile_img img {
+  width: 2.5rem;
+  border-radius: 50%;
+}
+
+/* userList */
+
+.user_list {
+  width: 15rem;
+  height: 30rem;
+  /* background: red; */
+  /* height: auto; */
+  position: absolute;
+  left: 2.5%;
+  top: 105%;
+  z-index: 1000000;
+}
+
+.user_list_card {
+  background-color: white;
+  padding: 0.5rem;
+  display: flex;
+  cursor: pointer;
+  border-bottom: 1px solid rgb(232, 232, 232);
+}
+
+.user_list_card:hover {
+  background-color: rgb(206, 208, 211);
+}
+
+.user_list_img {
+  width: 1.5rem;
+  margin-right: 1rem;
+  border-radius: 100%;
+}
+
+.user_list_name {
+  text-decoration: none;
+  color: black;
+}
+.change_language_button {
+  border: none;
+  outline: none;
+  background: transparent;
+  cursor: pointer;
+}

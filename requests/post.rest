@@ -1,0 +1,62 @@
+### -create a new post
+POST http://localhost:3001/api/post/
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MDgzOWYyZmQ0NDM3ZjI1ZDQzMDM1OWQiLCJuYW1lIjoiQW5nZWwiLCJsYXN0TmFtZSI6Ik1vcmVubyIsImVtYWlsIjoiYW5nZWxAZ21haWwuY29tIiwiaWF0IjoxNjE5Mjc0MDE5fQ.3wyqqxwsxl0_fe4sVhaWBVyJeWSjd8wpG10JF8ozAJo
+
+{
+    "text": "pero yo no puedo, pa ser sincero yo ni puedo ta ta ta ta ta ta"
+}
+
+
+
+
+### get all the post by a user
+GET http://localhost:3001/api/post/607ff48c00979f1e04a03c6f/posts
+
+
+
+
+### - get all post
+GET http://localhost:3001/api/post/
+
+
+
+
+### - get a single post
+GET http://localhost:3001/api/post/608429426db65507ac64ce5e
+
+
+
+
+
+### - give like to a post
+PUT http://localhost:3001/api/post/608732af816f6a16dc6228e0/like
+Content-Type: application/json
+
+{
+    "id": "6086561f9d0fa20cc007618f",
+    "type": "like"
+}
+
+### - create a commect in a post
+PUT http://localhost:3001/api/post/609035c7d71f7903d42bd90a/comment
+Content-Type: application/json
+
+{
+    "id": "608e5a5dc68ff8234cd15fb1",
+    "text": "we are try it another comment but this comment is goin to be more long "
+}
+
+### - deleter a post
+DELETE  http://localhost:3001/api/post/60837f8a441ab92008058261
+
+
+### - give like to a comment 
+put  http://localhost:3001/api/post/comments/like
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MGExM2YxYTdkMWFlNjI2ZmMzYWM0MzYiLCJuYW1lIjoiY2luZHkiLCJsYXN0TmFtZSI6ImNlcmVicm9zIiwiZW1haWwiOiJjaW5keUBnbWFpbC5jb20iLCJpYXQiOjE2MjExODAyMTB9.kfwVbxis3o8DMhhMd9EbVKdch24s86Rsn0ZjtEb2B_k
+
+{
+    "type": "love",
+    "commentId": "60a071b76318cb0620785f98"
+}

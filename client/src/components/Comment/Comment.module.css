@@ -1,0 +1,126 @@
+.container {
+  display: flex;
+  margin: 0.6rem 0.6rem;
+  width: auto;
+  /* justify-content: center; */
+  max-width: 95%;
+  /* background-color: blue; */
+}
+.images img {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 100%;
+  margin-right: 0.5rem;
+}
+.capa_one {
+  width: auto;
+  background-color: #f0f2f5;
+  padding: 0.5rem;
+  border-radius: 1rem;
+  position: relative;
+}
+.capa_two {
+  margin-left: 2rem;
+}
+.name {
+  color: rgb(56, 56, 56);
+  font-size: 0.8rem;
+}
+
+.button {
+  border: none;
+  outline: none;
+  background: none;
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+  font-size: 0.7rem;
+}
+.time {
+  font-size: 0.65rem;
+  color: grey;
+}
+
+.ex {
+  display: flex;
+  flex-direction: column;
+}
+.capa_container {
+  /* background-color: red; */
+}
+.capa_three {
+  width: 100%;
+  height: 1.5rem;
+  /* background-color: red; */
+  padding: 0 0.5rem;
+  display: flex;
+  align-items: center;
+  color: rgb(146, 146, 146);
+}
+.capa_three p img {
+  width: 1rem;
+  height: 1rem;
+  margin-right: 0.4rem;
+  cursor: pointer;
+}
+.capa_three p:hover {
+  text-decoration: underline;
+}
+.comment_likes {
+  position: absolute;
+  border: 1px solid rgb(225, 225, 225);
+  width: 2rem;
+  height: 1rem;
+  right: -15px;
+  bottom: -12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 1rem;
+  font-size: 0.7rem;
+  background-color: rgb(255, 255, 255);
+  color: rgb(131, 131, 131);
+}
+.capa_container_e {
+  /* background-color: red; */
+  display: grid;
+  grid-template-columns: 10% 90%;
+}
+.fdfds {
+  width: auto;
+}
+
+.container_t {
+  width: 100%;
+  margin: 0 0 1rem 0;
+  /* background-color: red; */
+}
+.n {
+  text-decoration: none;
+}
+.meta_t {
+  width: 100%;
+  height: auto;
+  /* margin: 0.5rem 0; */
+  /* background-color: green; */
+  display: flex;
+}
+.meta_t img {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  margin-right: 0.5rem;
+}
+.meta_content {
+  display: flex;
+  /* background-color: grey; */
+  background-color: #f0f2f5;
+  padding: 0.5rem;
+  border-radius: 1rem;
+  flex-direction: column;
+  position: relative;
+  height: auto;
+}
+
+.inpu {
+  margin: 0.4rem 2rem;
+}

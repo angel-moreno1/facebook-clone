@@ -1,0 +1,27 @@
+### create a chat or send and existent chat
+POST http://localhost:3001/api/chat/608e5a5dc68ff8234cd15fb1 HTTP/1.1
+Content-Type: application/json
+
+{
+    "id": "60924c582fd0d92b5c4871e9"
+}
+
+
+### - get latest by user 
+GET http://localhost:3001/api/chat/60942f82d7590121407ddcdd/latest
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MDk0MmY4MmQ3NTkwMTIxNDA3ZGRjZGQiLCJuYW1lIjoiQW5nZWwiLCJsYXN0TmFtZSI6Ik1vcmVubyIsImVtYWlsIjoiYW5nZWxtcnNvZmFAZ21haWwuY29tIiwiaWF0IjoxNjIwMzI5MzAzfQ.b8uwcwSSE7oShoLZvx1SgSozefOKmxo6wXy2fcqCI3I
+
+### - get single chat
+GET http://localhost:3001/api/chat/60924c6d2fd0d92b5c4871eb
+
+# 6086561f9d0fa20cc007618f - friend 
+# 6088b8108e8a731fa01cb625 - me
+### send a message to a chat -- chatId, from, message
+PUT http://localhost:3001/api/chat/send HTTP/1.1
+Content-Type: application/json
+
+{
+    "id": "60869c7169e804140cb770b7",
+    "from": "6086561f9d0fa20cc007618f",
+    "message": "im angel"
+}

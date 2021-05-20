@@ -1,0 +1,49 @@
+### get all the users
+GET http://localhost:3001/api/users/ HTTP/1.1
+
+### create a user
+POST http://localhost:3001/api/users/register HTTP/1.1
+Content-Type: application/json
+
+{
+    "name": "cindy",
+    "lastName": "cerebros",
+    "email": "cindy@gmail.com",
+    "password": "asd"
+}
+
+
+### - get a single 
+GET http://localhost:3001/api/users/60924c582fd0d92b5c4871e9
+
+
+### - add a friend -- userId, FriendId
+PUT http://localhost:3001/api/users/friend/add
+Content-Type: application/json
+
+{
+    "id": "608b4a53567ecb273c683a88",
+    "friendId": "608c3cf9eaf1330328186652"
+}
+
+### login user
+POST http://localhost:3001/api/users/login HTTP/1.1
+Content-Type: application/json
+
+{
+    "email": "cindy@gmail.com",
+    "password": "asd"
+}
+
+
+### updated user
+PUT http://localhost:3001/api/users/608e5a5dc68ff8234cd15fb1 HTTP/1.1
+Content-Type: application/json
+
+{
+    "profile_photo": "/uploads/1619805550792.jfif"
+}
+
+
+### upload file 
+POST http://localhost:3001/upload HTTP/1.1
