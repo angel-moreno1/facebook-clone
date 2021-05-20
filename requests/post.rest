@@ -4,7 +4,7 @@ Content-Type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MDgzOWYyZmQ0NDM3ZjI1ZDQzMDM1OWQiLCJuYW1lIjoiQW5nZWwiLCJsYXN0TmFtZSI6Ik1vcmVubyIsImVtYWlsIjoiYW5nZWxAZ21haWwuY29tIiwiaWF0IjoxNjE5Mjc0MDE5fQ.3wyqqxwsxl0_fe4sVhaWBVyJeWSjd8wpG10JF8ozAJo
 
 {
-    "text": "pero yo no puedo, pa ser sincero yo ni puedo ta ta ta ta ta ta"
+    "text": "test for post "
 }
 
 
