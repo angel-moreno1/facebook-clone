@@ -70,8 +70,8 @@ const Home = () => {
                     <h1 className={styles.sug}>Suggestion</h1>
                     {
                         suggestions.data 
-                        ? suggestions.data.length >= 1 &&
-                        suggestions.data.map(
+                        ? suggestions.data.length > 0 
+                            ? suggestions.data.map(
                             
                             user => (
                                 <Link to={`/account/profile/${user._id}`} className={styles.text_dec_none}>
@@ -81,9 +81,9 @@ const Home = () => {
                                     </div>
                                 </Link>
                             )
-                            
                         )
-                        : null
+                            : <span>Not suggestions yet</span>
+                        : <span>Loading suggestions</span>
                     }
                 </div>
            

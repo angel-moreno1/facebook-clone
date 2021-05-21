@@ -6,7 +6,7 @@ const commentSchema = Schema(
     {
         user: { type: Schema.Types.ObjectId, ref: 'User' },
         text: { type: String, required: true },
-        likes: [{ type: Schema.Types.ObjectId, ref: 'Like' }],
+        likes: [{ type: Schema.Types.ObjectId, ref: 'Like', unique: true }],
         subcomments: [{ type: Schema.Types.ObjectId, ref: 'subComment' }]
     },
     { timestamps: true }

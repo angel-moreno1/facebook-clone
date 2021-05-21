@@ -2,6 +2,7 @@ import fs from 'fs'
 import Post from '../models/Post.js'
 import Like from '../models/Like.js'
 import Comment from '../models/Comment.js'
+import SubComment from '../models/SubComment.js'
 
 export const getAllPostController = async (req, res ) => {
     await Post.find({})
@@ -145,25 +146,42 @@ export const createLikeController = async (req, res, next) => {
     }
 }
 
-export const createLikeCommentController = async (req, res, next) => {
+export const createSubCommentController = async (req, res, next) => {
+    try {
+        const commentId = req.params.commentId
+        const { text, respondTo } = req.body
+        const comment = await Comment.findById(commentId)
+        const subComment = await  SubComment.create({ text, respondTo, user: req.user._id })
+        comment.subcomments = [...comment.subcomments, subComment._id]
+        await comment.save()
+        res.json(comment)
+    } catch (error) {
+        next(error)
+    }
+}
+
+export const likeCommentController = async (req, res, next) => {
     try {
         const {type, commentId} = req.body
-        res.json({ type, commentId })
-        // const userId = req.user._id 
-        // const comment = await Comment.findById(commentId)
-        // const alreadyGiveLike = comment.likes.find(like => like.user === userId)
-        // if(alreadyGiveLike) {
-        //     comment.likes = comment.likes.filter(
-        //         like => like._id !== alreadyGiveLike._id
-        //     )
-        //     const updated = comment.save()
-        //     return res.json(updated)
-        // }else {
-        //     const like = await Like.create({ user: userId, type })
-        //     comment.likes = [...comment.likes, like._id]
-        //     const updated = await comment.save()
-        //     res.json(updated)
-        // }
+        const post = req.params.id
+        const userId = req.user._id 
+        const comment = await Comment.findById(commentId).populate('likes', 'user')
+        const alreadyGiveLike = comment.likes.find(
+            like => like.user.toString() === userId.toString()
+        )
+
+        if(alreadyGiveLike) {
+            comment.likes = comment.likes.filter(
+                like => like._id !== alreadyGiveLike._id
+            )
+            const updated = await (await comment.save()).depopulate()
+            return res.json(updated)
+        }else {
+            const like = await Like.create({ user: userId, type })
+            comment.likes = [...comment.likes, like._id]
+            const updated = await (await comment.save()).depopulate()
+            res.json(updated)
+        }
     } catch (error) {
         next(error)
     }

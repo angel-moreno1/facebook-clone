@@ -10,7 +10,8 @@ import {
     createLikeController,
     deletePostController,
     getOnlyVideosPostController,
-    createLikeCommentController
+    likeCommentController,
+    createSubCommentController
 } from '../controllers/post.js'
 
 const postRouter = Router()
@@ -23,6 +24,7 @@ postRouter.post('/', isAuth, upload.single('file'), createPostController)
 postRouter.put('/:id/comment', isAuth, createCommentController)
 postRouter.put('/:id/like', isAuth, createLikeController)
 postRouter.delete('/:id', isAuth, deletePostController)
-postRouter.put('/comments/like', createLikeCommentController)
+postRouter.put('/:id/comment/like', isAuth, likeCommentController)
+postRouter.put('/:commentId/comment/sub', isAuth, createSubCommentController)
 
 export default postRouter

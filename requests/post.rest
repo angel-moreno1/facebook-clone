@@ -52,11 +52,21 @@ DELETE  http://localhost:3001/api/post/60837f8a441ab92008058261
 
 
 ### - give like to a comment 
-put  http://localhost:3001/api/post/comments/like
+PUT   http://localhost:3001/api/post/fgjkflkfgd/comment/like
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MGExM2YxYTdkMWFlNjI2ZmMzYWM0MzYiLCJuYW1lIjoiY2luZHkiLCJsYXN0TmFtZSI6ImNlcmVicm9zIiwiZW1haWwiOiJjaW5keUBnbWFpbC5jb20iLCJpYXQiOjE2MjExODAyMTB9.kfwVbxis3o8DMhhMd9EbVKdch24s86Rsn0ZjtEb2B_k
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MGE2YjVhMjMwMmZkNzIyODQ0NjkwNmQiLCJuYW1lIjoiQW5nZWwiLCJsYXN0TmFtZSI6Ik1vcmVubyIsImVtYWlsIjoiYW5nZWxtcnNvZmFAZ21haWwuY29tIiwiaWF0IjoxNjIxNTYyNzg5fQ.wUAlAn6gjjVWvseQ7GJbeeUvMcO9hChQnT1YTdjf3hY
 
 {
     "type": "love",
-    "commentId": "60a071b76318cb0620785f98"
+    "commentId": "60a715348ccf872a70f77697"
+}
+
+### - create sub comment
+PUT   http://localhost:3001/api/post/60a715348ccf872a70f77697/comment/sub
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MGE2YjVhMjMwMmZkNzIyODQ0NjkwNmQiLCJuYW1lIjoiQW5nZWwiLCJsYXN0TmFtZSI6Ik1vcmVubyIsImVtYWlsIjoiYW5nZWxtcnNvZmFAZ21haWwuY29tIiwiaWF0IjoxNjIxNTYyNzg5fQ.wUAlAn6gjjVWvseQ7GJbeeUvMcO9hChQnT1YTdjf3hY
+
+{
+    "text": "I love your comment",
+    "respondTo": "60a6b5a2302fd7228446906d"
 }

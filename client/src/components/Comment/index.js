@@ -9,8 +9,10 @@ import { Link } from 'react-router-dom'
 
 const Comment = memo(props => {
 
+    console.log(props)
+
     const [ reply, setReply ] = useState(false)
-    const [ likes, setLikes ] = useState(0)
+    const [ likes, setLikes ] = useState(props.likes.length)
     const [ clicked, setclicked ] = useState(false)
 
     const handleLikeComment = () => {

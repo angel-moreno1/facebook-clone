@@ -4,8 +4,6 @@ import axios from "axios"
 import { selectUser } from '../../features/userSlice'
 import Comment, { CommentSkeleton } from "../Comment"
 import styles from './Comments.module.css'
-import { translatePlaceholder } from '../../i18n/translate'
-import { useIntl } from 'react-intl'
 import Input from '../Input'
 
 const Comments = props => {
@@ -15,6 +13,8 @@ const Comments = props => {
     const [ loading, setLoading ] = useState(false)
     const user = useSelector(selectUser)
     
+    console.log({ comments })
+
     useEffect(() => {
         if(shouldLoadComments) {        
             setLoading(true)
@@ -41,7 +41,7 @@ const Comments = props => {
             <div className={styles.comments}>
                 {
                     loading
-                    ? [1, 2].map(key => <CommentSkeleton key={key} />)
+                    ? [1].map(key => <CommentSkeleton key={key} />)
                     : comments.map(
                         comment => <Comment 
                             key={comment._id} 
