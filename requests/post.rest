@@ -64,9 +64,9 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MGE2YjVhM
 ### - create sub comment
 PUT   http://localhost:3001/api/post/60a715348ccf872a70f77697/comment/sub
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MGE2YjVhMjMwMmZkNzIyODQ0NjkwNmQiLCJuYW1lIjoiQW5nZWwiLCJsYXN0TmFtZSI6Ik1vcmVubyIsImVtYWlsIjoiYW5nZWxtcnNvZmFAZ21haWwuY29tIiwiaWF0IjoxNjIxNTYyNzg5fQ.wUAlAn6gjjVWvseQ7GJbeeUvMcO9hChQnT1YTdjf3hY
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MGE3MTQ4ZThjY2Y4NzJhNzBmNzc2OTYiLCJuYW1lIjoiTGl6emllIiwibGFzdE5hbWUiOiJIYW5kbGV5IiwiZW1haWwiOiJsQGdtYWlsLmNvbSIsImlhdCI6MTYyMTYxNzUyN30.9aWsuDbyDDw9HHR4W3LuTrrFsc5zdw8s1tfjB0BpnD0
 
 {
-    "text": "I love your comment",
+    "text": "I am doing a test for a subcomment in a comment of Angel",
     "respondTo": "60a6b5a2302fd7228446906d"
 }

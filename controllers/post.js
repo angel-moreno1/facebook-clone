@@ -83,6 +83,20 @@ export const getAllByUserController =  async (req, res, next) => {
     }
 }
 
+export const getCommentsController = async (req, res, next) => {
+    try {
+        const id = req.params.id
+        Comment.findById(id).populate({ path: 'subcomments', select: 'user text likes respondTo'}).exec((err, doc) => {
+            SubComment.populate(doc.subcomments, [{path: 'user', select: 'name lastName profile_photo'}, {path: 'respondTo', select: 'name lastName'}], (err, sub) => {
+                doc.subcomments = sub
+                res.json({subcomments: doc.subcomments})
+            })
+        }) 
+    } catch (error) {
+        next(error)
+    }
+}
+
 export const getSinglePostController = async (req, res) => {
     try {    
         const id = req.params.id
@@ -91,7 +105,7 @@ export const getSinglePostController = async (req, res) => {
         if(post) {
             Post.findById(id).populate([
                 { path: 'user', select: 'name lastName profile_photo' },
-                { path: 'comments', select: 'user text likes createdAt' },
+                { path: 'comments', select: 'user text likes createdAt subcomments' },
                 { path: 'likes', select: 'user type' }
             ]).exec((err, doc) => {
                 Like.populate(doc.likes, { path: 'user', select: 'name lastName profile_photo' }, (err, likes) => {

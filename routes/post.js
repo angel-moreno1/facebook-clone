@@ -11,7 +11,8 @@ import {
     deletePostController,
     getOnlyVideosPostController,
     likeCommentController,
-    createSubCommentController
+    createSubCommentController,
+    getCommentsController
 } from '../controllers/post.js'
 
 const postRouter = Router()
@@ -19,6 +20,7 @@ const postRouter = Router()
 postRouter.get('/', getAllPostController)
 postRouter.get('/:uid/posts', isAuth, getAllByUserController)
 postRouter.get('/:id', getSinglePostController)
+postRouter.get('/:id/comments', getCommentsController)
 postRouter.get('/videos/all', isAuth, getOnlyVideosPostController)
 postRouter.post('/', isAuth, upload.single('file'), createPostController)
 postRouter.put('/:id/comment', isAuth, createCommentController)

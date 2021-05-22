@@ -83,7 +83,7 @@ const Home = () => {
                             )
                         )
                             : <span>Not suggestions yet</span>
-                        : <span>Loading suggestions</span>
+                        : null
                     }
                 </div>
            
@@ -117,25 +117,27 @@ const Home = () => {
             </main>
             <div className={styles.right_conta}> 
                 <aside className={styles.right}>
-                 <h3 className={styles.contacts}>{ translate('contacts') }</h3>
-                 {
-                    isLoadingFriends
-                    ? <h6>Loading friends...</h6>
-                    : hasError
-                        ? <h6>Was an error</h6>
-                        : friends.length >= 1
-                            ? friends.map(
-                                friend => (
-                                    <Link key={friend._id} className={styles.text_dec_none} to={`/account/profile/${friend._id}`}>
-                                        <div className={styles.friend_container}>
-                                            <img src={'http://localhost:3001'+friend.profile_photo} alt={friend.name} />
-                                            <p>{friend.name} {friend.lastName}</p>
-                                        </div>
-                                    </Link>
-                                )
-                            )
-                            : null
-                 }
+                    <div >
+                        <h3 className={styles.contacts}>{ translate('contacts') }</h3>
+                        {
+                            isLoadingFriends
+                            ? <h6>Loading friends...</h6>
+                            : hasError
+                                ? <h6>Was an error</h6>
+                                : friends.length >= 1
+                                    ? friends.map(
+                                        friend => (
+                                            <Link key={friend._id} className={styles.text_dec_none} to={`/account/profile/${friend._id}`}>
+                                                <div className={styles.friend_container}>
+                                                    <img src={'http://localhost:3001'+friend.profile_photo} alt={friend.name} />
+                                                    <p>{friend.name} {friend.lastName}</p>
+                                                </div>
+                                            </Link>
+                                        )
+                                    )
+                                    : null
+                        }  
+                    </div>       
             </aside>
             </div>
  

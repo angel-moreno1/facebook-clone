@@ -231,6 +231,13 @@ const FriendProfile = props => {
         
                 <div className={styles.posts_container}>
                 {
+                      Object.keys(friendInformation).find(field => field === 'friends')
+                        ? friendInformation.friends.find(friend => friend === user.id)
+                            ? <h1>Should be a create post for a friend</h1>
+                            : null
+                        : null
+                }
+                {
                     
                     posts.length < 1  
                         ? <h5>Not post to show</h5>

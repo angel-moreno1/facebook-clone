@@ -12,8 +12,6 @@ const Comments = props => {
     const [ comments, setComments ] = useState([])
     const [ loading, setLoading ] = useState(false)
     const user = useSelector(selectUser)
-    
-    console.log({ comments })
 
     useEffect(() => {
         if(shouldLoadComments) {        

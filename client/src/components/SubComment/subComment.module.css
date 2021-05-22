@@ -1,0 +1,79 @@
+.n {
+  text-decoration: none;
+}
+.meta_t {
+  margin-top: 1rem;
+  width: 100%;
+  height: auto;
+  /* margin: 0.5rem 0; */
+  /* background-color: green; */
+  display: flex;
+  text-decoration: none;
+}
+.respondTo {
+  color: rgb(30, 101, 255);
+  cursor: pointer;
+  text-decoration: none;
+}
+.meta_t img {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  margin-right: 0.5rem;
+  text-decoration: none;
+}
+.text {
+  text-decoration: none;
+  color: black;
+}
+.meta_content {
+  display: flex;
+  /* background-color: grey; */
+  background-color: #f0f2f5;
+  padding: 0.5rem;
+  border-radius: 1rem;
+  flex-direction: column;
+  position: relative;
+  height: auto;
+  text-decoration: none;
+}
+.name {
+  color: rgb(56, 56, 56);
+  font-size: 0.8rem;
+  text-decoration: none;
+}
+.comment_likes {
+  position: absolute;
+  border: 1px solid rgb(105, 156, 250);
+  width: 2rem;
+  height: 1rem;
+  right: -15px;
+  bottom: -12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 1rem;
+  font-size: 0.7rem;
+  background-color: rgb(255, 255, 255);
+  color: rgb(35, 107, 240);
+}
+
+.button {
+  border: none;
+  outline: none;
+  background: none;
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+  font-size: 0.7rem;
+}
+.time {
+  font-size: 0.65rem;
+  color: grey;
+}
+.capa_two {
+  margin-left: 2.5rem;
+}
+
+.inpu {
+  margin-left: 2.5rem;
+}

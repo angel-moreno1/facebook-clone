@@ -34,6 +34,7 @@ app.use('/api/post', postRouter)
 app.use('/api/chat', chatRouter)
 app.use('/uploads', express.static('./uploads'))
 
+
 app.use(required)
 
 app.use(unknownEndpoint)
